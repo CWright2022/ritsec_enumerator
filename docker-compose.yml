@@ -1,0 +1,13 @@
+version: '3.7'
+services:
+  go:
+    image: alexbeaver/s23-pentest-go:latest
+    container_name: go
+    ports:
+      - 9888:9888
+    command: go run main.go
+  flask:
+    image: alexbeaver/s23-pentest-py:latest
+    container_name: flask
+    ports:
+      - 5000:5000
